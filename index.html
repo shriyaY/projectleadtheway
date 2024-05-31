@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Match</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Volunteer Match</h1>
+        <button id="loginBtn">Login</button>
+    </header>
+    <main>
+        <!-- User registration form -->
+        <form id="registrationForm" class="hidden">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills"></textarea>
+            <label for="profilePic">Profile Picture:</label>
+            <input type="file" id="profilePic" name="profilePic">
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Volunteer opportunities -->
+        <section id="opportunities" class="hidden">
+            <!-- Display volunteer opportunities here -->
+        </section>
+
+        <!-- Map and locations section -->
+        <section id="mapSection" class="hidden">
+            <h2>Map and Locations</h2>
+            <div id="map"></div>
+        </section>
+
+        <!-- Add volunteer opportunity form -->
+        <form id="addOpportunityForm" class="hidden">
+            <label for="orgName">Organization Name:</label>
+            <input type="text" id="orgName" name="orgName" required>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <button type="submit">Add Opportunity</button>
+        </form>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
